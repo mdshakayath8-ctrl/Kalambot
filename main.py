@@ -191,8 +191,8 @@ def send_user_otp(chat_id, number, svc_name, c_name, message, otp_code_api):
     
     text += f"┌───────── • 🔔 • ─────────┐\n"
     text += f"    <b>আপনার নতুন ওটিপি এসেছে!</b>\n"
-    text += f"└──────────────────────────┘\n\n"
-    text += f"✨ 𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 <a href='https://t.me/Sanra03263'>𝐒𝐊𝐘</a> ✨"
+    text += f"└─────────────────────────┘\n\n"
+    text += f"✨ 𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 <a href='t.me/SKYSMSOWNER'>𝐒𝐊𝐘</a> ✨"
     
     keyboard = types.InlineKeyboardMarkup(row_width=1)
     keyboard.add(
@@ -226,7 +226,7 @@ def background_otp_poller():
                     db.data["users"][uid]["active_numbers"] = None
                     db.save()
                     try:
-                        bot.send_message(uid, "⚠️ <b>আপনার কেনা নাম্বারের মেয়াদ (২০ মিনিট) শেষ হয়ে গেছে!</b>\nআপনি চাইলে নতুন করে নাম্বার কিনতে পারেন।", parse_mode='HTML')
+                        bot.send_message(uid, "⚠️ <b>আপনার নাম্বারের মেয়াদ (২০ মিনিট) শেষ হয়ে গেছে!</b>\nআপনি চাইলে নতুন করে নাম্বার পারেন।", parse_mode='HTML')
                     except: pass
 
             otps = fetch_otps()
@@ -557,7 +557,7 @@ def handle_ins_callbacks(call):
                 f"<code>{top_line}\n"
                 f"║ {box_content} ║\n"
                 f"{bottom_line}</code>\n\n"
-                f"<b><a href='https://t.me/Sanra03263'>👨‍💻 DEVELOPED BY SKY</a></b>\n\n"
+                f"<b><a href='https://t.me/SKYSMSOWNER'>👨‍💻 𝐃𝐄𝐕𝐄𝐋𝐎𝐏 𝐁𝐘 𝐒𝐊𝐘 </a></b>\n\n"
                 f"⌛ <i>𝑾𝒂𝒊𝒕𝒊𝒏𝒈 𝑭𝒐𝒓 𝑺𝒎𝒔... (Max 20 mins)</i>"
             )
 
